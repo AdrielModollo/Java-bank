@@ -10,22 +10,30 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TryCatch {
 
 	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		boolean continuar = true;
 		
-		try {
-			Scanner s = new Scanner(System.in);
-			System.out.println("Numero: ");
-			int a = s.nextInt();
-			System.out.println("Divisor: ");
-			int b = s.nextInt();
-			
-			System.out.println(a / b);
-		}
-			catch(InputMismatchException el) {
-				System.out.println("Error de InputMismatchException capturado!");
+		do {
+			try {
+				System.out.println("Numero: ");
+				int a = s.nextInt();
+				System.out.println("Divisor: ");
+				int b = s.nextInt();
+				
+				System.out.println(a / b);
+				continuar = false;
 			}
-			catch(Throwable e2) {
-				System.out.println("Erro de ArithmaticException capturado!");
-			}
+				catch(InputMismatchException el) {
+					System.out.println("Favor inserir números inteiros!");
+					s.nextLine(); //descarta entrada inválida
+				}
+				catch(Throwable e2) {
+					System.out.println("O divisor deve ser diferente de zero!");
+				}
+				finally {
+					System.out.println("Finally executado...");
+				}
+		} while (continuar);
 	}
 
 }
