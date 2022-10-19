@@ -12,11 +12,16 @@ public class BankApplication {
 		conta.saldo = 4000;
 		conta.exibeSaldo();
 		
-		conta.saque(1000);
-		conta.exibeSaldo();
+		//conta.saque(1000);
+		//conta.exibeSaldo();
 		
-		conta.depositar(4500);
-		conta.exibeSaldo();
+		//conta.depositar(4500);
+		//conta.exibeSaldo();
+		
+		Conta destino = new Conta();
+		destino.cliente = "Marina";
+		destino.saldo = 1700;
+		destino.exibeSaldo();
 	}
 
 }

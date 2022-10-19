@@ -15,4 +15,9 @@ public class Conta {
 	void depositar(double valor) {
 		saldo += valor;
 	}
+	
+	void transferir(Conta destino, double valor) {
+		this.saque(valor);
+		destino.depositar(valor);
+	}
 }
