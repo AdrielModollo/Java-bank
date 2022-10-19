@@ -11,4 +11,8 @@ public class Conta {
 	void saque(double valor) {
 		saldo -= valor;
 	}
+	
+	void depositar(double valor) {
+		saldo += valor;
+	}
 }

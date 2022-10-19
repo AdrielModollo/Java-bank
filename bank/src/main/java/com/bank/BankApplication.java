@@ -14,7 +14,9 @@ public class BankApplication {
 		
 		conta.saque(1000);
 		conta.exibeSaldo();
-	
+		
+		conta.depositar(4500);
+		conta.exibeSaldo();
 	}
 
 }
