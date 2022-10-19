@@ -11,6 +11,9 @@ public class BankApplication {
 		conta.cliente = "Adriel";
 		conta.saldo = 4000;
 		conta.exibeSaldo();
+		
+		conta.saque(1000);
+		conta.exibeSaldo();
 	
 	}
 

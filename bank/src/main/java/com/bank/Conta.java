@@ -5,7 +5,10 @@ public class Conta {
 	double saldo;
 	
 	void exibeSaldo() {
-		System.out.println(cliente + "seu saldo é: " + saldo);
+		System.out.println(cliente + " seu saldo é: " + saldo);
 	}
 
+	void saque(double valor) {
+		saldo -= valor;
+	}
 }
