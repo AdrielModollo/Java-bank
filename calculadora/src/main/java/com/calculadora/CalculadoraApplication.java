@@ -10,6 +10,10 @@ public class CalculadoraApplication {
 		Matematica m = new Matematica();
 		int maior = m.maior(40,30);
 		System.out.println(maior);
+		
+		
+		double sum = m.soma(30, 20);
+		System.out.println(sum);
 	}
 
 }

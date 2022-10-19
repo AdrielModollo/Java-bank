@@ -9,4 +9,9 @@ public class Matematica {
 			return dois;
 		}
 	}
+	
+	double soma(double um, double dois) {
+		double s = um + dois;
+		return s;
+	}
 }
